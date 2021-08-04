@@ -16,14 +16,25 @@
     background-image: url('/images/the-sleep-co-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: rgb(240,240,240);
+    background-position: center;
 }
 
 .bg-featured { background-color: #f4b525; }
 .bg-light { background-color: #e3ecf2; }
 
-.landscape { padding-bottom: 65%; }
+.portrait-tall { padding-bottom: 203.5%;}
 .portrait { padding-bottom: 125%; }
 .square { padding-bottom: 100%; }
+.landscape { padding-bottom: 66%; }
+.landscape-wide { padding-bottom: 56%; }
+
+/* Background Position */
+
+.bg-pos-t { background-position: top; }
+.bg-pos-b { background-position: bottom; }
+.bg-pos-l { background-position: left; }
+.bg-pos-r { background-position: right; }
 
 /* Universal styles and Utility classes */
 
@@ -114,6 +125,7 @@ header {
     background-image: url('/images/the-sleep-co-4.jpg');
     background-size: cover;
     background-position: center;
+    padding: 2% 5%;
 }
 
 header h3 {
@@ -172,6 +184,12 @@ footer a {
     background-image: url('/images/the-sleep-co-2.jpg');
     background-position: 50% 57%; 
 }
+
+/* Image Gallery */
+
+.gallery [class*="col-"] {
+    padding: 0.5%; 
+  }
 
 /* Icon grid */
 
