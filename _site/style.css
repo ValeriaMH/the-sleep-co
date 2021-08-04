@@ -15,8 +15,14 @@
 .bg-image {
     background-image: url('/images/the-sleep-co-1.jpg');
     background-size: cover;
-    min-height: 10rem;
+    background-repeat: no-repeat;
 }
+
+.bg-featured { background-color: #f4b525; }
+.bg-light { background-color: #e3ecf2; }
+
+.landscape { padding-bottom: 65%; }
+.portrait { padding-bottom: 120%; }
 
 /* Universal styles and Utility classes */
 

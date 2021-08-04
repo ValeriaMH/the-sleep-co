@@ -1,5 +1,15 @@
 ---
 layout: default
+cards:
+ - heading: Small heading
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem vero adipisci optio eius eveniet.
+   featured_image: /images/the-sleep-co-1.jpg
+ - heading: Small heading
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem vero adipisci optio eius eveniet.
+   featured_image: /images/the-sleep-co-2.jpg
+ - heading: Small heading
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem vero adipisci optio eius eveniet.
+   featured_image: /images/the-sleep-co-3.jpg
 ---
 
 <!-------------------- Header banner -------------------->
@@ -35,7 +45,51 @@ layout: default
 
     </div>
 
+    <div class="padded-sm col-3">
+
+        <h3> little heading </h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vero optio, qui est perferendis molestias a omnis nostrum consectetur inventore? Natus, error qui! Consequatur quod eveniet a minus ullam nostrum. </p>
+
+    </div>
+
+    <div class="padded-sm col-3">
+
+        <h3> little heading </h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vero optio, qui est perferendis molestias a omnis nostrum consectetur inventore? Natus, error qui! Consequatur quod eveniet a minus ullam nostrum. </p>
+
+    </div>
+
+    <div class="padded-sm col-3">
+
+        <h3> little heading </h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vero optio, qui est perferendis molestias a omnis nostrum consectetur inventore? Natus, error qui! Consequatur quod eveniet a minus ullam nostrum. </p>
+
+    </div>
+
 </section>
+
+<!-------------------- Cards -------------------->
+
+<section class="grid padded">
+
+    {% for item in page.cards %}
+    <div class="col-4 padded-sm">
+
+        <div class="card">
+
+            <div class="bg-image portrait" style="background-image: url('{{item.featured_image}}')"></div>
+            <div class="padded-1">
+                <h3> {{item.heading}} </h3>
+                <p> {{item.description}} </p>
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+</section>
+
 
 <!-------------------- Image Banner -------------------->
 
@@ -47,6 +101,19 @@ layout: default
             <span class="small-text font-weight-normal"> spend over $150 and activate </span>
             <br /><span class="featured-text">free</span> express shipping
         </h3>
+
+    </div>
+
+</section>
+
+<!-------------------- Gallery -------------------->
+
+<section class="grid">
+
+    <div class="padded col-6-middle">
+
+        <h2> built to last a <span class="featured-text">lifetime</span></h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam laboriosam, repudiandae voluptatibus ea necessitatibus saepe officia consectetur veniam ullam libero, similique hic dignissimos, blanditiis laudantium commodi fugiat magnam ad molestiae? </p>
 
     </div>
 

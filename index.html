@@ -1,5 +1,14 @@
 ---
 layout: default
+featured:
+ - icon: fas fa-cloud
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
+ - icon: fas fa-apple-alt
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
+ - icon: fas fa-carrot
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
+ - icon: fas fa-pizza-slice
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
 ---
 
     <!-------------------- Header banner -------------------->
@@ -31,13 +40,13 @@ layout: default
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptates odit doloribus perferendis consequatur? Maiores, odio? <a href="https://www.google.com">Laboriosam</a> saepe repellat natus reprehenderit.
             </p>
         </div>
-        <div class="bg-image bg-bed col-6 tall-70">
+        <div class="bg-image bg-bed col-6_xs-12 tall-70 hide-xs">
             <!-- background image bed -->
         </div>
-        <div class="bg-image bg-pug col-6 tall-70">
+        <div class="bg-image bg-pug col-6_xs-12 tall-70">
             <!-- background image pug sleeping -->
         </div>
-        <div class="padded col-6-middle editable">
+        <div class="padded col-6_xs-12-middle editable">
             <h2> so <span class="featured-text"> soft </span> you'll melt </h2>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptates odit doloribus perferendis consequatur? Maiores, odio? Laboriosam saepe repellat natus reprehenderit qui consequuntur exercitationem. Provident corrupti omnis iusto unde debitis. </p>
         </div>
@@ -45,26 +54,18 @@ layout: default
 
     <!--------------------  Feature icon grid -------------------->
 
-    <section class="padded grid bg-dark">
+    <section class="padded grid-center bg-dark">
         <div class="padded-sm col-12 text-center">
             <h2> <span class="featured-text"> features </span> you will love </h2>
         </div>
-        <div class="padded-sm col-3 editable">
-            <i class="fas fa-cloud"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae possimus quidem praesentium aperiam dolorem sit culpa inventore numquam sed ullam earum suscipit! Dicta. </p>
+
+        {% for item in page.featured %}
+        <div class="padded-sm col-3_sm-6 xxs-stack editable">
+            <i class="{{item.icon}}"></i>
+            <p> {{item.description}} </p>
         </div>
-        <div class="padded-sm col-3 editable">
-            <i class="fas fa-cloud"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae possimus quidem praesentium aperiam dolorem sit culpa inventore numquam sed ullam earum suscipit! Dicta. </p>
-        </div>
-        <div class="padded-sm col-3 editable">
-            <i class="fas fa-cloud"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae possimus quidem praesentium aperiam dolorem sit culpa inventore numquam sed ullam earum suscipit! Dicta. </p>
-        </div>
-        <div class="padded-sm col-3 editable">
-            <i class="fas fa-cloud"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae possimus quidem praesentium aperiam dolorem sit culpa inventore numquam sed ullam earum suscipit! Dicta. </p>
-        </div>
+        {% endfor %}
+      
     </section>
 
     <!--------------------  Image Banner -------------------->
