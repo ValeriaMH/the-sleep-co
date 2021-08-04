@@ -22,7 +22,8 @@
 .bg-light { background-color: #e3ecf2; }
 
 .landscape { padding-bottom: 65%; }
-.portrait { padding-bottom: 120%; }
+.portrait { padding-bottom: 125%; }
+.square { padding-bottom: 100%; }
 
 /* Universal styles and Utility classes */
 
@@ -49,15 +50,14 @@ body {
 
 /* Typography styles */
 
-h2 {
-    font-size: 2.5rem;
+h2, h3, h4, h5, h6 {
     line-height: 1.1;
     margin-bottom: 1rem;
 }
 
-h3 {
-    line-height: 1;
-}
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+h3 { font-size: 1.5rem; }
 
 p {
     font-weight: 200;
@@ -121,8 +121,44 @@ header h3 {
     line-height: 1;
 }
 
+nav a {
+    padding: 0.5rem;
+    display: inline-block;
+    border: none;
+}
+
+.logo h2 {
+    margin-bottom: 0;
+}
+
 footer a {
     border: none;
+}
+
+/* Mobile Menu Styles */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.hamburger-button {
+    position: relative;
+    z-index: 2;
+}
+
+.hamburger-button i {
+    font-size: 2.2rem;
+    margin-bottom: 0;
 }
 
 /* Background images */
@@ -139,9 +175,77 @@ footer a {
 
 /* Icon grid */
 
-.fas {
+.fas,
+.fab {
     display: block;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 3rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.3rem;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: 2px solid transparent;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #ffbe00;
+    outline: none;
+}
+
+.button {
+    padding: 0.5rem 2rem;
+    background-color: #ffbe00;
+    appearance: none;
+    border: 2px solid #ffbe00;
+    color: inherit;
+}
+
+/* General CSS Responsive Styles (Apply everywhere unless overrided */
+
+.show-xs,
+.show-sm,
+.show-md,
+.mobile-menu {
+    display: none;
+}
+
+
+/* -------------- MD Media Query (64em / 1024px) ---------------- */
+/* Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */
+
+@media(max-width:64em) {
+    .show-md { display: block; }
+    .hide-md { display: none; }
+
+    .md-tall-80 { min-height: 80vh; }
+}
+
+
+/* -------------- MD Media Query (48em / 768px) ---------------- */
+/* Styles added here will apply at devices smaller than 768px, or zoomed in equivalent */
+
+@media(max-width:64em) {
+
+    html { font-size: 14px; }
+    p { font-size: 1.1rem; }
+
+    .show-sm { display: block; }
+    .hide-sm { display: none; }
+
+    .sm-text-center { text-align: center; }
+    .sm-text-left { text-align: left; }
+    .sm-text-right { text-align: right; }
+
+    .sm-padded { padding: 5%; }
+    .sm-padded-1 { padding: 1rem; }
+
+
 }
