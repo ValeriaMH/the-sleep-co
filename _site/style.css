@@ -47,6 +47,8 @@ body {
 .padded-sm { padding: 1rem; }
 .padded-lg { padding: 10%; }
 
+.padded-b-1 { padding-bottom: 1rem; }
+
 .bg-dark { 
     background-color: #192b37;
     color: white;
