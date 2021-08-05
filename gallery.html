@@ -38,6 +38,40 @@ gallery:
 </header>
 
 <section class="padded">
+
+    <h2> Popup Gallery </h2>
+    <div class="gallery grid" id="lightgallery">
+
+      {% for item in page.gallery %}
+      <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}"> 
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}')"> 
+        </div>
+      </a>
+      {% endfor %}
+      
+    </div> 
+
+    <div class="gallery grid" id="lightgallery-2">
+
+      <a class="button" href="/images/the-sleep-co-1.jpg" title="funny dog 1"> 
+        View our work
+      </a>
+      <a href="/images/the-sleep-co-2.jpg" title="funny dog 1"> </a>
+      <a href="/images/the-sleep-co-3.jpg" title="funny dog 2"> </a>
+      <a href="/images/the-sleep-co-4.jpg" title="funny dog 3"> </a>
+      <a href="/images/the-sleep-co-1.jpg" title="funny dog 4"> </a>
+      <a href="/images/the-sleep-co-2.jpg" title="funny dog 5"> </a>
+      <a href="/images/the-sleep-co-3.jpg" title="funny dog 6"> </a>
+      
+    </div> 
+
+</section>
+
+
+
+<section class="padded">
+    <!-- Standard Gallery -->
+    <h2> Standard Gallery </h2>
     <div class="gallery grid">
 
         {% for item in page.gallery %}
